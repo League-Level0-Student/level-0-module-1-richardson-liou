@@ -3,19 +3,20 @@ Minim minim;
 AudioPlayer sound;
 void setup(){
 minim = new Minim(this);      
-sound = minim.loadFile("smush.ogg");      
+sound = minim.loadFile("slap.wav");      
 size(300,300);
 fill(#DEC800);
 ellipse(150,150,150,150);
-}
+ 
+  }
+
 void draw(){
- if (mousePressed && (mouseButton == RIGHT)) {
+
+  if (mousePressed && (mouseButton == LEFT)) {
   sound.play();
   sound.rewind();
-  PImage pepperoni =loadImage("pepporoni.jpg");
-  pepperoni.resize(100,100);
-  image(pepperoni,100,100);
-  }
-  
-  
+  PImage pepperoni =loadImage("pepperoni.png");
+  pepperoni.resize(150,150);
+  image(pepperoni,75,80);
+  } 
 }
